@@ -12,8 +12,7 @@ class GroupChatsPage extends StatefulWidget {
 }
 
 class _GroupChatsPageState extends State<GroupChatsPage> {
-  final ScrollController _scrollController =
-      ScrollController(); // Controller untuk ListView
+  final ScrollController _scrollController = ScrollController();
 
   List<Map<String, dynamic>> list = [
     {
@@ -165,16 +164,6 @@ class _GroupChatsPageState extends State<GroupChatsPage> {
                       attachment: e['attachment'],
                     ))
                 .toList(),
-            // const [
-            //   // LEFT
-            //   AppContentChat(isLeft: true),
-            //   AppContentChat(isLeft: false),
-            //   AppContentChat(isLeft: true),
-            //   AppContentChat(isLeft: true),
-
-            //   // RIGHT
-            //   AppContentChat(isLeft: false),
-            // ],
           ),
           const Positioned(
               bottom: 0, left: 0, right: 0, child: AppInputMessage())
@@ -484,14 +473,14 @@ class AppMessageContent extends StatelessWidget {
                     children: [
                       Text(
                         profile['name'],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xFFF2994A),
                           fontSize: 12,
                         ),
                       ),
                       Text(
                         profile['is_admin'] ? 'admin' : '',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xFFA1A1BC),
                           fontSize: 12,
                         ),

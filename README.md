@@ -8,7 +8,7 @@
 
 # Flutter Messaging UI
 
-**Flutter Live Score UI** is a sleek and responsive mobile application built using Flutter, designed to deliver live sports scores in real time. This project was created by converting a design crafted in Figma, ensuring that the visual elements are faithfully represented and optimized for performance. The app features a modern UI that provides an engaging and interactive experience for users, with intuitive navigation and smooth transitions. It is intended to serve as both a practical reference for developing live score applications and a demonstration of Flutter's capabilities in creating visually stunning and performant mobile apps. Whether you're tracking your favorite team or following multiple sports events, this app ensures you stay up-to-date with the latest scores in a seamless manner.
+*Flutter UI Showcase* is a modern and responsive mobile application built using Flutter, designed to demonstrate visually appealing and high-performance user interfaces. This project was created by converting a design from Figma, ensuring precise visual representation and optimized performance. The app highlights a sleek UI with intuitive navigation and smooth transitions, making it a practical reference for developers aiming to create visually stunning applications. This project showcases Flutter's capabilities in building mobile applications that prioritize aesthetics and performance without compromising user experience.
 
 ## 🎨 Design
 

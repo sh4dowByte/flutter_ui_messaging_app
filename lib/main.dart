@@ -19,24 +19,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   ThemeMode themeMode = ThemeMode.light;
 
-  // void _updateStatusBar() {
-  //   // Atur gaya status bar berdasarkan mode tema
-  //   final isDark = themeMode == ThemeMode.dark;
-  //   SystemChrome.setSystemUIOverlayStyle(
-  //     SystemUiOverlayStyle(
-  //       statusBarColor: Colors.transparent, // Transparan
-  //       statusBarIconBrightness:
-  //           isDark ? Brightness.light : Brightness.dark, // Ikon
-  //       systemNavigationBarColor:
-  //           isDark ? Colors.black : Colors.white, // Warna navigasi
-  //       systemNavigationBarIconBrightness:
-  //           isDark ? Brightness.light : Brightness.dark, // Ikon navigasi
-  //       statusBarBrightness:
-  //           isDark ? Brightness.dark : Brightness.light, // Untuk perangkat iOS
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
