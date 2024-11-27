@@ -81,6 +81,20 @@ class AppTheme {
         backgroundColor: Pallete.black1, // Warna background untuk mode gelap
       ),
       textTheme: textTheme(primaryTextColor, secondaryTextColor),
+      switchTheme: SwitchThemeData(
+        thumbColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return Pallete.blue1; // Warna tombol saat aktif
+          }
+          return Colors.red; // Warna tombol saat tidak aktif
+        }),
+        trackColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return Pallete.blue1.withOpacity(0.3); // Warna lintasan saat aktif
+          }
+          return Colors.red.shade100; // Warna lintasan saat tidak aktif
+        }),
+      ),
     );
   }
 

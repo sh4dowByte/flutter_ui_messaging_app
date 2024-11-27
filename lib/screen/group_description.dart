@@ -35,155 +35,162 @@ class _GroupDescriptionPageState extends State<GroupDescriptionPage>
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: const Color(0xFFFCFCFC),
-      body: NestedScrollView(
-        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              // backgroundColor: const Color(0xFFFFFFFF),
-              title: const Text(
-                'Fullsnack Designers',
-                style: TextStyle(fontSize: 18),
-              ),
-              actions: const [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Icon(Icons.more_vert_rounded),
+      body: SafeArea(
+        child: NestedScrollView(
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                // backgroundColor: const Color(0xFFFFFFFF),
+                title: const Text(
+                  'Fullsnack Designers',
+                  style: TextStyle(fontSize: 18),
                 ),
-              ],
-              expandedHeight: 250.0,
-              floating: false,
-              pinned: true,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Stack(
-                  fit: StackFit.expand,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 20, horizontal: 40),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 50),
-                          const Row(
-                            children: [
-                              Icon(Icons.info_outline_rounded),
-                              SizedBox(width: 16),
-                              Flexible(
-                                child: Text(
-                                  'We are fullsnack designers, yes. From food, for food, by food!',
-                                  overflow: TextOverflow.fade,
+                actions: const [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Icon(Icons.more_vert_rounded),
+                  ),
+                ],
+                expandedHeight: 250.0,
+                floating: false,
+                pinned: true,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 20, horizontal: 40),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 50),
+                            const Row(
+                              children: [
+                                Icon(Icons.info_outline_rounded),
+                                SizedBox(width: 16),
+                                Flexible(
+                                  child: Text(
+                                    'We are fullsnack designers, yes. From food, for food, by food!',
+                                    overflow: TextOverflow.fade,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 32),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Flexible(
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.info_outline_rounded),
-                                    SizedBox(width: 16),
-                                    Text(
-                                      'Notifications',
-                                      overflow: TextOverflow.fade,
-                                    ),
-                                  ],
+                              ],
+                            ),
+                            const SizedBox(height: 32),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Flexible(
+                                  child: Row(
+                                    children: [
+                                      AppSvgIcon(
+                                        'notification',
+                                        color:
+                                            Theme.of(context).iconTheme.color,
+                                      ),
+                                      const SizedBox(width: 16),
+                                      const Text(
+                                        'Notifications',
+                                        overflow: TextOverflow.fade,
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Switch(
-                                value: isSwitched,
-                                onChanged: (value) {
-                                  setState(() {
-                                    isSwitched = value;
-                                  });
-                                },
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    // Image.network(
-                    //   'https://via.placeholder.com/350x150',
-                    //   fit: BoxFit.cover,
-                    // ),
-                    // Container(
-                    //   alignment: Alignment.center,
-                    //   color: Colors.white.withOpacity(0.5),
-                    //   child: const Text(
-                    //     'Header Content',
-                    //     style: TextStyle(
-                    //       color: Colors.white,
-                    //       fontSize: 24.0,
-                    //       fontWeight: FontWeight.bold,
-                    //     ),
-                    //   ),
-                    // ),
-                  ],
-                ),
-              ),
-              bottom: PreferredSize(
-                preferredSize: const Size.fromHeight(48.0),
-                child: Column(
-                  children: [
-                    Divider(
-                      thickness: 1,
-                      height: 0,
-                      color: Theme.of(context).dividerColor,
-                    ),
-                    Container(
-                      alignment:
-                          Alignment.centerLeft, // Menempelkan TabBar ke kiri
-                      // color: const Color(0xFFFCFCFC), // Warna background TabBar
-                      child: TabBar(
-                        tabAlignment: TabAlignment.start,
-                        dividerHeight: 0,
-                        isScrollable: true,
-                        controller: _tabController,
-                        indicatorColor: Pallete.blue1,
-
-                        indicator: UnderlineTabIndicator(
-                          borderSide: BorderSide(
-                            color: Pallete.blue1, // Warna indikator
-                            width: 4.0, // Ketebalan indikator
-                          ),
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(
-                                6.0), // Radius atas pada indikator
-                          ),
-
-                          insets: const EdgeInsets.symmetric(
-                              horizontal: 30.0), // Lebar indikator
+                                Switch(
+                                  value: isSwitched,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      isSwitched = value;
+                                    });
+                                  },
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        indicatorSize:
-                            TabBarIndicatorSize.label, // Sesuaikan dengan label
-                        labelColor: Colors.black, // Warna teks tab yang dipilih
-                        unselectedLabelColor:
-                            Colors.grey, // Warna teks tab yang tidak dipilih
-                        tabs: [
-                          _buildCustomTab(0, "stars", "Bookmarks"),
-                          _buildCustomTab(1, "image", "Images"),
-                          _buildCustomTab(2, "video", "Videos"),
-                          _buildCustomTab(3, "document", "Documents"),
-                        ],
                       ),
-                    ),
-                  ],
+
+                      // Image.network(
+                      //   'https://via.placeholder.com/350x150',
+                      //   fit: BoxFit.cover,
+                      // ),
+                      // Container(
+                      //   alignment: Alignment.center,
+                      //   color: Colors.white.withOpacity(0.5),
+                      //   child: const Text(
+                      //     'Header Content',
+                      //     style: TextStyle(
+                      //       color: Colors.white,
+                      //       fontSize: 24.0,
+                      //       fontWeight: FontWeight.bold,
+                      //     ),
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+                bottom: PreferredSize(
+                  preferredSize: const Size.fromHeight(48.0),
+                  child: Column(
+                    children: [
+                      Divider(
+                        thickness: 1,
+                        height: 0,
+                        color: Theme.of(context).dividerColor,
+                      ),
+                      Container(
+                        alignment:
+                            Alignment.centerLeft, // Menempelkan TabBar ke kiri
+                        // color: const Color(0xFFFCFCFC), // Warna background TabBar
+                        child: TabBar(
+                          tabAlignment: TabAlignment.start,
+                          dividerHeight: 0,
+                          isScrollable: true,
+                          controller: _tabController,
+                          indicatorColor: Pallete.blue1,
+
+                          indicator: UnderlineTabIndicator(
+                            borderSide: BorderSide(
+                              color: Pallete.blue1, // Warna indikator
+                              width: 4.0, // Ketebalan indikator
+                            ),
+                            borderRadius: const BorderRadius.vertical(
+                              top: Radius.circular(
+                                  6.0), // Radius atas pada indikator
+                            ),
+
+                            insets: const EdgeInsets.symmetric(
+                                horizontal: 30.0), // Lebar indikator
+                          ),
+                          indicatorSize: TabBarIndicatorSize
+                              .label, // Sesuaikan dengan label
+                          labelColor:
+                              Colors.black, // Warna teks tab yang dipilih
+                          unselectedLabelColor:
+                              Colors.grey, // Warna teks tab yang tidak dipilih
+                          tabs: [
+                            _buildCustomTab(0, "stars", "Bookmarks"),
+                            _buildCustomTab(1, "image", "Images"),
+                            _buildCustomTab(2, "video", "Videos"),
+                            _buildCustomTab(3, "document", "Documents"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ];
-        },
-        body: TabBarView(
-          controller: _tabController,
-          children: const [
-            TabBookmarks(),
-            Center(child: Text('Content for Tab Images')),
-            Center(child: Text('Content for Tab Videos')),
-            Center(child: Text('Content for Tab Documents')),
-          ],
+            ];
+          },
+          body: TabBarView(
+            controller: _tabController,
+            children: const [
+              TabBookmarks(),
+              Center(child: Text('Content for Tab Images')),
+              Center(child: Text('Content for Tab Videos')),
+              Center(child: Text('Content for Tab Documents')),
+            ],
+          ),
         ),
       ),
     );

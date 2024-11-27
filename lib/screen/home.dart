@@ -180,9 +180,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // Target tinggi dalam piksel
-    final double minHeightInPixels = MediaQuery.of(context).size.height - 335.0;
+    final double minHeightInPixels = MediaQuery.of(context).size.height - 390.0;
     final double initialHeightInPixels =
-        MediaQuery.of(context).size.height - 335.0;
+        MediaQuery.of(context).size.height - 390.0;
 
     // Hitung tinggi dalam persentase
     final double minChildSize =
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisSpacing: 8.0, // Jarak antar kolom
                         mainAxisSpacing: 8.0, // Jarak antar baris
                         childAspectRatio:
-                            3 / 1.6, // Perbandingan ukuran item (lebar/tinggi)
+                            3 / 1.9, // Perbandingan ukuran item (lebar/tinggi)
                       ),
                       itemCount: pinnedChats.length,
                       itemBuilder: (context, index) {

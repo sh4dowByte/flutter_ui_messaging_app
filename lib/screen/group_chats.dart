@@ -15,6 +15,65 @@ class _GroupChatsPageState extends State<GroupChatsPage> {
   final ScrollController _scrollController =
       ScrollController(); // Controller untuk ListView
 
+  List<Map<String, dynamic>> list = [
+    {
+      'self': false,
+      'profile': {
+        'image': 'photo-1494790108377-be9c29b29330',
+        'status': 'online',
+        'name': 'Mike Mazowski As',
+        'is_admin': true,
+      },
+      'message': {
+        'content':
+            'Hello guys, we have discussed about post-corona vacation plan and our decision is to go to Bali. We will have a very big party after this corona ends! These are some images about our destination',
+        'time': '16.10',
+      },
+      'attachment': [
+        {'type': 'image', 'url': 'photo-1658767309666-7059226e6de0'},
+        {'type': 'image', 'url': 'photo-1714746041059-eea019f20570'},
+        {'type': 'image', 'url': 'photo-1630440172123-f939afdab7e8'},
+      ],
+    },
+    {
+      'self': true,
+      'profile': {
+        'image': 'photo-1542727313-4f3e99aa2568',
+        'status': 'online',
+        'is_admin': true,
+      },
+      'message': {
+        'content':
+            'That’s very nice place! you guys made a very good decision. Can’t wait to go on vacation!',
+        'time': '16.20',
+      },
+    },
+    {
+      'self': true,
+      'profile': {
+        'image': 'photo-1542727313-4f3e99aa2568',
+        'status': 'online',
+        'is_admin': true,
+      },
+      'message': {
+        'content': 'I very excited',
+        'time': '16.23',
+      },
+    },
+    {
+      'self': true,
+      'profile': {
+        'image': 'photo-1542727313-4f3e99aa2568',
+        'status': 'online',
+        'is_admin': true,
+      },
+      'message': {
+        'content': '😄',
+        'time': '16.24',
+      },
+    }
+  ];
+
   @override
   void dispose() {
     _scrollController
@@ -98,16 +157,24 @@ class _GroupChatsPageState extends State<GroupChatsPage> {
             controller: _scrollController,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16)
                 .copyWith(top: 10, bottom: 130),
-            children: const [
-              // LEFT
-              AppContentChat(isLeft: true),
-              AppContentChat(isLeft: false),
-              AppContentChat(isLeft: true),
-              AppContentChat(isLeft: true),
+            children: list
+                .map((e) => AppContentChat(
+                      isLeft: !e['self'],
+                      profile: e['profile'],
+                      message: e['message'],
+                      attachment: e['attachment'],
+                    ))
+                .toList(),
+            // const [
+            //   // LEFT
+            //   AppContentChat(isLeft: true),
+            //   AppContentChat(isLeft: false),
+            //   AppContentChat(isLeft: true),
+            //   AppContentChat(isLeft: true),
 
-              // RIGHT
-              AppContentChat(isLeft: false),
-            ],
+            //   // RIGHT
+            //   AppContentChat(isLeft: false),
+            // ],
           ),
           const Positioned(
               bottom: 0, left: 0, right: 0, child: AppInputMessage())
@@ -316,9 +383,16 @@ class TextChannels extends StatelessWidget {
 
 class AppContentChat extends StatelessWidget {
   final bool isLeft;
+  final Map<String, dynamic> profile;
+  final Map<String, dynamic> message;
+  final List<Map<String, dynamic>>? attachment;
+
   const AppContentChat({
     super.key,
     required this.isLeft,
+    required this.profile,
+    required this.message,
+    this.attachment,
   });
 
   @override
@@ -333,28 +407,35 @@ class AppContentChat extends StatelessWidget {
             // Content message
             AppMessageContent(
               isLeft: isLeft,
+              profile: profile,
+              message: message,
+              attachment: attachment,
             ),
             const SizedBox(
               width: 10,
             ),
             // Profile picture
-            const AppProfileIcon(
-              picture: 'photo-1494790108377-be9c29b29330',
-              status: 'online',
+            AppProfileIcon(
+              picture: profile['image'],
+              status: profile['status'],
               size: 40,
             ),
           ] else ...[
             // Profile picture
-            const AppProfileIcon(
-              picture: 'photo-1494790108377-be9c29b29330',
-              status: 'online',
+            AppProfileIcon(
+              picture: profile['image'],
+              status: profile['status'],
               size: 40,
             ),
             const SizedBox(
               width: 10,
             ),
             // Content message
-            const AppMessageContent(),
+            AppMessageContent(
+              profile: profile,
+              message: message,
+              attachment: attachment,
+            ),
             const SizedBox(width: 49),
           ]
         ],
@@ -365,9 +446,16 @@ class AppContentChat extends StatelessWidget {
 
 class AppMessageContent extends StatelessWidget {
   final bool? isLeft;
+  final Map<String, dynamic> profile;
+  final Map<String, dynamic> message;
+  final List<Map<String, dynamic>>? attachment;
+
   const AppMessageContent({
     super.key,
     this.isLeft = true,
+    required this.profile,
+    required this.message,
+    this.attachment,
   });
 
   @override
@@ -391,18 +479,18 @@ class AppMessageContent extends StatelessWidget {
               children: [
                 // Chat header
                 if (isLeft == true) ...[
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Mike Mazowski',
+                        profile['name'],
                         style: TextStyle(
                           color: Color(0xFFF2994A),
                           fontSize: 12,
                         ),
                       ),
                       Text(
-                        'admin',
+                        profile['is_admin'] ? 'admin' : '',
                         style: TextStyle(
                           color: Color(0xFFA1A1BC),
                           fontSize: 12,
@@ -414,7 +502,7 @@ class AppMessageContent extends StatelessWidget {
                 ],
                 // Message
                 Text(
-                  'Hello guys, we have discussed about post-corona vacation plan and our decision is to go to Bali. We will have a very big party after this corona ends! These are some images about our destination',
+                  message['content'],
                   style: TextStyle(
                     color: isLeft == true
                         ? const Color(0xFF000000)
@@ -423,7 +511,7 @@ class AppMessageContent extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '16.04',
+                  message['time'],
                   style: TextStyle(
                     color: isLeft == true
                         ? const Color(0xFFA1A1BC)
@@ -435,17 +523,16 @@ class AppMessageContent extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          // Media
-          const SizedBox(
-            width: 204,
-            child: ThreeInOneSquare(
-              imageUrls: [
-                'photo-1658767309666-7059226e6de0',
-                'photo-1714746041059-eea019f20570',
-                'photo-1630440172123-f939afdab7e8',
-              ],
+
+          if (attachment != null) ...[
+            // Media
+            SizedBox(
+              width: 204,
+              child: ThreeInOneSquare(
+                imageUrls: attachment!.map<String>((e) => e['url']).toList(),
+              ),
             ),
-          ),
+          ],
         ],
       ),
     );

@@ -46,12 +46,14 @@ This project is built using the following technologies:
 
 ## 🖼️ Screenshot
 
-| Light Mode | Dark Mode |
-| ---------- | --------- |
-|            |           |
-|            |           |
-|            |           |
-|            |           |
+| Light Mode                                     | Dark Mode                                      |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![1732683073798](image/README/1732683073798.png) | ![1732683091334](image/README/1732683091334.png) |
+| ![1732683142197](image/README/1732683142197.png) | ![1732683120127](image/README/1732683120127.png) |
+| ![1732683161433](image/README/1732683161433.png) | ![1732683374750](image/README/1732683374750.png) |
+| ![1732683250623](image/README/1732683250623.png) | ![1732683362443](image/README/1732683362443.png) |
+| ![1732683277946](image/README/1732683277946.png) | ![1732683393789](image/README/1732683393789.png) |
+| ![1732683289803](image/README/1732683289803.png) | ![1732683301522](image/README/1732683301522.png) |
 
 ## 📝 License
 
