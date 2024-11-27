@@ -92,7 +92,7 @@ class AppChatTile extends StatelessWidget {
         height: 102,
         decoration: BoxDecoration(
           color: unread == 0
-              ? const Color(0xFFF7F7F7)
+              ? Theme.of(context).cardColor
               : const Color(0xFF2F80ED).withOpacity(0.1),
           // color: Colors.red,
           borderRadius: BorderRadius.circular(8),

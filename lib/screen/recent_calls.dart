@@ -97,10 +97,13 @@ class RecentCallsPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: const Text('Recent Calls'),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: AppSvgIcon('search'),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: AppSvgIcon(
+              'search',
+              color: Theme.of(context).primaryColorDark,
+            ),
           ),
         ],
       ),

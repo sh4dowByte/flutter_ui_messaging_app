@@ -5,26 +5,38 @@ import 'package:get/get.dart';
 import '../config/app_theme.dart';
 import '../widget/widget.dart';
 
-class SettingsPage extends StatefulWidget {
+class ThemeController extends GetxController {
+  var isDarkMode =
+      Get.isDarkMode.obs; // Gunakan RxBool untuk memantau perubahan
+
+  void toggleTheme() {
+    if (isDarkMode.value) {
+      Get.changeTheme(AppTheme.lightTheme);
+    } else {
+      Get.changeTheme(AppTheme.darkTheme);
+    }
+    isDarkMode.value = !isDarkMode.value; // Perbarui nilai RxBool
+  }
+}
+
+class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
-  State<SettingsPage> createState() => _SettingsPageState();
-}
-
-class _SettingsPageState extends State<SettingsPage> {
-  bool isSwitched = false;
-
-  @override
   Widget build(BuildContext context) {
+    final ThemeController themeController = Get.put(ThemeController());
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
         title: const Text('Settings'),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: AppSvgIcon('search'),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: AppSvgIcon(
+              'search',
+              color: Theme.of(context).primaryColorDark,
+            ),
           ),
         ],
       ),
@@ -53,10 +65,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       const SizedBox(height: 8),
                       Text(
                         'Trust your feelings , be a good human beings',
-                        style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w100,
-                            color: Pallete.textSecondary),
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),
@@ -69,14 +78,9 @@ class _SettingsPageState extends State<SettingsPage> {
               title: 'Dark Mode',
               icon: 'theme',
               leading: Switch(
-                value: isSwitched,
+                value: themeController.isDarkMode.value,
                 onChanged: (value) {
-                  setState(() {
-                    isSwitched = value;
-                    Get.isDarkMode
-                        ? Get.changeTheme(AppTheme.lightTheme)
-                        : Get.changeTheme(AppTheme.darkTheme);
-                  });
+                  themeController.toggleTheme();
                 },
               ),
             ),

@@ -34,12 +34,12 @@ class _GroupDescriptionPageState extends State<GroupDescriptionPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFCFCFC),
+      // backgroundColor: const Color(0xFFFCFCFC),
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return [
             SliverAppBar(
-              backgroundColor: const Color(0xFFFFFFFF),
+              // backgroundColor: const Color(0xFFFFFFFF),
               title: const Text(
                 'Fullsnack Designers',
                 style: TextStyle(fontSize: 18),
@@ -129,15 +129,14 @@ class _GroupDescriptionPageState extends State<GroupDescriptionPage>
                 child: Column(
                   children: [
                     Divider(
-                      // Divider di atas TabBar
                       thickness: 1,
-                      color: Colors.grey[200],
                       height: 0,
+                      color: Theme.of(context).dividerColor,
                     ),
                     Container(
                       alignment:
                           Alignment.centerLeft, // Menempelkan TabBar ke kiri
-                      color: const Color(0xFFFCFCFC), // Warna background TabBar
+                      // color: const Color(0xFFFCFCFC), // Warna background TabBar
                       child: TabBar(
                         tabAlignment: TabAlignment.start,
                         dividerHeight: 0,
@@ -282,11 +281,11 @@ class TabBookmarks extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 20),
         children: [
           const SizedBox(height: 10),
-          bookmarkTile(
+          bookmarkTile(context,
               'The next thing we will consider is how to create our own kitchen set in our office!..'),
-          bookmarkTile(
+          bookmarkTile(context,
               'Pls keep a note that we will take a vacation on next weekend. Make sure you join the eve...'),
-          bookmarkTile(
+          bookmarkTile(context,
               'The event will be held in London. Sunday, 26th of April 2020. '),
           const SizedBox(height: 20),
 
@@ -295,7 +294,7 @@ class TabBookmarks extends StatelessWidget {
             height: 40,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: const Color(0xFFF7F7F7),
+              // color: const Color(0xFFF7F7F7),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Center(
@@ -317,9 +316,10 @@ class TabBookmarks extends StatelessWidget {
             height: 48,
             width: double.infinity,
             decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
+                // color: const Color(0xFFFFFFFF),
+
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: const Color(0xFFEDEDED))),
+                border: Border.all(color: Theme.of(context).dividerColor)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -351,9 +351,12 @@ class TabBookmarks extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             width: double.infinity,
             decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: const Color(0xFFEDEDED))),
+              // color: const Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(
+                color: Theme.of(context).dividerColor,
+              ),
+            ),
             child: Column(
               children: [
                 Row(
@@ -444,7 +447,7 @@ class TabBookmarks extends StatelessWidget {
     );
   }
 
-  Widget bookmarkTile(String text) {
+  Widget bookmarkTile(BuildContext context, String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
@@ -452,7 +455,7 @@ class TabBookmarks extends StatelessWidget {
           Expanded(
             child: Text(
               text,
-              style: TextStyle(color: Pallete.textSecondary),
+              style: TextStyle(color: Theme.of(context).primaryColorDark),
             ),
           ),
           const SizedBox(width: 21),

@@ -20,139 +20,154 @@ class _HomePageState extends State<HomePage> {
 
   List<Map<String, dynamic>> pinnedChats = [
     {
-      'picture': 'photo-1494790108377-be9c29b29330',
-      'name': 'Mike Wazowski',
-      'message': 'That’s awesome!',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'offline'
+      "picture": "photo-1494790108377-be9c29b29330",
+      "name": "Mike Wazowski",
+      "message":
+          "Today has been an incredible day filled with exciting opportunities. I can't wait to see how everything unfolds as we move forward!",
+      "unread": 0,
+      "is_reply": true,
+      "status": "offline"
     },
     {
-      'picture': 'photo-1500648767791-00dcc994a43e',
-      'name': 'Darlene Steward',
-      'message': 'Pls take a look at the...',
-      'unread': 5,
-      'is_reply': false,
-      'status': 'offline'
+      "picture": "photo-1500648767791-00dcc994a43e",
+      "name": "Darlene Steward",
+      "message":
+          "I just finished reviewing the document you sent me, and I think it's a fantastic start. Let’s schedule a meeting to discuss the next steps in detail.",
+      "unread": 5,
+      "is_reply": false,
+      "status": "offline"
     },
     {
-      'picture': 'photo-1438761681033-6461ffad8d80',
-      'name': 'Gregory Robertson',
-      'message': 'Preparing for next vac...',
-      'unread': 0,
-      'is_reply': false,
-      'status': 'disabled'
+      "picture": "photo-1438761681033-6461ffad8d80",
+      "name": "Gregory Robertson",
+      "message":
+          "This weekend, I’m planning a trip to the mountains. It’s been a while since I had a proper break, and I think it’ll be the perfect way to recharge and clear my mind.",
+      "unread": 0,
+      "is_reply": false,
+      "status": "disabled"
     },
     {
-      'picture': 'photo-1506863530036-1efeddceb993',
-      'name': 'Dwight Wilson',
-      'message': 'I’d like to watch ... ',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'online'
-    },
+      "picture": "photo-1506863530036-1efeddceb993",
+      "name": "Dwight Wilson",
+      "message":
+          "I’ve been exploring some interesting ideas for the project we’re working on. I’ll compile them and share my thoughts with you by tomorrow evening.",
+      "unread": 0,
+      "is_reply": true,
+      "status": "online"
+    }
   ];
 
   List<Map<String, dynamic>> recentChats = [
     {
-      'picture': 'photo-1500648767791-00dcc994a43e',
-      'name': 'Darlene Steward',
-      'message': 'Pls take a look at the...',
-      'time': '18.31',
-      'unread': 5,
-      'is_reply': false,
-      'status': 'offline'
+      "picture": "photo-1500648767791-00dcc994a43e",
+      "name": "Darlene Steward",
+      "message":
+          "Hey, can you check the document I sent earlier? It's important.",
+      "time": "18.31",
+      "unread": 5,
+      "is_reply": false,
+      "status": "offline"
     },
     {
-      'picture': 'photo-1494790108377-be9c29b29330',
-      'name': 'Fullsnack Designers',
-      'message': 'Hello guys, we have discussed about ...',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'offline'
+      "picture": "photo-1494790108377-be9c29b29330",
+      "name": "Fullsnack Designers",
+      "message":
+          "Hi team, we’re making great progress with the new design framework. Let's review tomorrow.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "offline"
     },
     {
-      'picture': 'photo-1583243552802-94ccb4200150',
-      'name': 'Lee Williamson',
-      'message': 'Yes, that’s gonna work, hopefully. ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'offline'
+      "picture": "photo-1583243552802-94ccb4200150",
+      "name": "Lee Williamson",
+      "message":
+          "I agree with the changes made in the last draft. Let's finalize it today.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "offline"
     },
     {
-      'picture': 'photo-1438761681033-6461ffad8d80',
-      'name': 'Gregory Robertson',
-      'message': 'Preparing for next vac...',
-      'time': '18.31',
-      'unread': 999,
-      'is_reply': false,
-      'status': 'disabled'
+      "picture": "photo-1438761681033-6461ffad8d80",
+      "name": "Gregory Robertson",
+      "message":
+          "Can we plan a quick call to discuss the upcoming vacation schedules?",
+      "time": "18.31",
+      "unread": 999,
+      "is_reply": false,
+      "status": "disabled"
     },
     {
-      'picture': 'photo-1506863530036-1efeddceb993',
-      'name': 'Dwight Wilson',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'online'
+      "picture": "photo-1506863530036-1efeddceb993",
+      "name": "Dwight Wilson",
+      "message":
+          "I’ve started working on the new feature you mentioned. Updates will follow soon.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "online"
     },
     {
-      'picture': 'photo-1502323777036-f29e3972d82f',
-      'name': 'Samuel Witnessa',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 10,
-      'is_reply': true,
-      'status': 'online'
+      "picture": "photo-1502323777036-f29e3972d82f",
+      "name": "Samuel Witnessa",
+      "message":
+          "Can you confirm the deadline for the next milestone? I’ll adjust accordingly.",
+      "time": "18.31",
+      "unread": 10,
+      "is_reply": true,
+      "status": "online"
     },
     {
-      'picture': 'photo-1517702145080-e4a4d91435bb',
-      'name': 'Bambang Wijayanto',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'online'
+      "picture": "photo-1517702145080-e4a4d91435bb",
+      "name": "Bambang Wijayanto",
+      "message":
+          "The report is ready for review. Let me know if there are any changes needed.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "online"
     },
     {
-      'picture': 'photo-1521132293557-5b908a59d1e1',
-      'name': 'Sururi Mandatson',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'online'
+      "picture": "photo-1521132293557-5b908a59d1e1",
+      "name": "Sururi Mandatson",
+      "message":
+          "I’ve checked the server logs. Everything seems fine on my end.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "online"
     },
     {
-      'picture': 'photo-1522091759069-9fe8e6826b7f',
-      'name': 'Michael Robbin',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'online'
+      "picture": "photo-1522091759069-9fe8e6826b7f",
+      "name": "Michael Robbin",
+      "message":
+          "Let’s discuss the deployment plan in today’s meeting. It’s crucial.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "online"
     },
     {
-      'picture': 'photo-1517777557049-0f1f4537b849',
-      'name': 'Jackobs Stewart',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'bussy'
+      "picture": "photo-1517777557049-0f1f4537b849",
+      "name": "Jackobs Stewart",
+      "message":
+          "I’ll be a bit busy this afternoon, but feel free to reach out via email.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "bussy"
     },
     {
-      'picture': 'photo-1526382925646-27b5eb86796e',
-      'name': 'Anastasia Redborn',
-      'message': 'I’d like to watch ... ',
-      'time': '18.31',
-      'unread': 0,
-      'is_reply': true,
-      'status': 'offline'
-    },
+      "picture": "photo-1526382925646-27b5eb86796e",
+      "name": "Anastasia Redborn",
+      "message":
+          "Do we have the final presentation ready? I’d like to review it before the meeting.",
+      "time": "18.31",
+      "unread": 0,
+      "is_reply": true,
+      "status": "offline"
+    }
   ];
 
   final List<Map<String, dynamic>> category = [
@@ -165,9 +180,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // Target tinggi dalam piksel
-    final double minHeightInPixels = MediaQuery.of(context).size.height - 390.0;
+    final double minHeightInPixels = MediaQuery.of(context).size.height - 335.0;
     final double initialHeightInPixels =
-        MediaQuery.of(context).size.height - 390.0;
+        MediaQuery.of(context).size.height - 335.0;
 
     // Hitung tinggi dalam persentase
     final double minChildSize =
@@ -234,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisSpacing: 8.0, // Jarak antar kolom
                         mainAxisSpacing: 8.0, // Jarak antar baris
                         childAspectRatio:
-                            3 / 2, // Perbandingan ukuran item (lebar/tinggi)
+                            3 / 1.6, // Perbandingan ukuran item (lebar/tinggi)
                       ),
                       itemCount: pinnedChats.length,
                       itemBuilder: (context, index) {
@@ -268,7 +283,7 @@ class _HomePageState extends State<HomePage> {
                 return Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25),
@@ -387,10 +402,7 @@ class CategorySheet extends StatelessWidget {
                   children: [
                     Text(
                       'Create a new category',
-                      style: TextStyle(
-                          color: Pallete.textPrimary,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -448,18 +460,17 @@ class CategorySheet extends StatelessWidget {
                     // Sugested category
                     Text(
                       'Suggested category',
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Pallete.textSecondary,
-                      ),
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelMedium!
+                          .copyWith(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 12),
-                    suggestedCategory(
+                    suggestedCategory(context,
                         title: 'Class',
                         subtitle: 'Biology-1, Mathematics-1A, and 3 others',
                         caption: 'Based on group’s name'),
-                    suggestedCategory(
+                    suggestedCategory(context,
                         title: 'Organizations',
                         subtitle:
                             'Flyway 2020, Flyway Internal Division, and 2 others',
@@ -473,19 +484,17 @@ class CategorySheet extends StatelessWidget {
                       children: [
                         Text(
                           'Included chats (3)',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Pallete.textSecondary,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(fontWeight: FontWeight.bold),
                         ),
                         Text(
                           '+ Add chats',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Pallete.blue1,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -529,7 +538,7 @@ class CategorySheet extends StatelessWidget {
     );
   }
 
-  Widget suggestedCategory(
+  Widget suggestedCategory(BuildContext context,
       {required String title,
       required String subtitle,
       required String caption}) {
@@ -553,10 +562,7 @@ class CategorySheet extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          Text(
-            caption,
-            style: TextStyle(fontSize: 12, color: Pallete.textSecondary),
-          ),
+          Text(caption, style: Theme.of(context).textTheme.labelMedium),
         ],
       ),
     );

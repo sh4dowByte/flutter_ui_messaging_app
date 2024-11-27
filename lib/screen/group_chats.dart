@@ -75,14 +75,20 @@ class _GroupChatsPageState extends State<GroupChatsPage> {
             ],
           ),
         ),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: AppSvgIcon('video'),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: AppSvgIcon(
+              'video',
+              color: Theme.of(context).primaryColorDark,
+            ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Icon(Icons.more_vert_rounded),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Icon(
+              Icons.more_vert_rounded,
+              color: Theme.of(context).primaryColorDark,
+            ),
           ),
         ],
       ),
@@ -127,7 +133,7 @@ class _AppInputMessageState extends State<AppInputMessage>
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).scaffoldBackgroundColor,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10),
@@ -234,7 +240,10 @@ class _AppInputMessageState extends State<AppInputMessage>
             // Input
             Row(
               children: [
-                const AppSvgIcon('emoji'),
+                AppSvgIcon(
+                  'emoji',
+                  color: Theme.of(context).primaryColorDark,
+                ),
                 const Expanded(
                   child: TextField(
                     style: TextStyle(
@@ -249,7 +258,10 @@ class _AppInputMessageState extends State<AppInputMessage>
                   ),
                 ),
                 const SizedBox(width: 8.0),
-                const AppSvgIcon('lampiran'),
+                AppSvgIcon(
+                  'lampiran',
+                  color: Theme.of(context).primaryColorDark,
+                ),
                 const SizedBox(width: 16.0),
                 Container(
                   padding: const EdgeInsets.all(8),

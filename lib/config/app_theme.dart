@@ -19,12 +19,14 @@ class AppTheme {
       scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       primaryColorDark: const Color(0xFF3F414E),
       primaryColorLight: Colors.white,
+      dividerColor: Colors.grey[100],
       dividerTheme: DividerThemeData(color: Colors.grey[100]),
       tabBarTheme: TabBarTheme(
         splashFactory: NoSplash.splashFactory, // Menonaktifkan ripple
         overlayColor: MaterialStateProperty.all(
             Colors.transparent), // Menonaktifkan hover
       ),
+      cardColor: const Color(0xFFF7F7F7).withOpacity(0.6),
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent,
@@ -45,171 +47,110 @@ class AppTheme {
           return Colors.red.shade100; // Warna lintasan saat tidak aktif
         }),
       ),
-      textTheme: TextTheme(
-        displayLarge: TextStyle(
-          fontSize: 57, // Display terbesar untuk teks utama atau header besar
-          color: primaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        displayMedium: TextStyle(
-          fontSize:
-              45, // Display sedang, digunakan untuk header besar namun tidak dominan
-          color: primaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        displaySmall: TextStyle(
-          fontSize: 36, // Display kecil, untuk sub-header atau judul penting
-          color: primaryTextColor,
-          fontWeight: FontWeight.bold,
-        ),
-        headlineLarge: TextStyle(
-          fontSize: 32, // Ukuran untuk headline atau judul utama
-          color: secondaryTextColor,
-        ),
-        headlineMedium: TextStyle(
-          fontSize: 28, // Ukuran headline menengah
-          color: primaryTextColor,
-        ),
-        headlineSmall: TextStyle(
-          fontSize: 24, // Ukuran headline kecil
-          color: primaryTextColor,
-        ),
-        titleLarge: TextStyle(
-          fontSize: 22, // Ukuran besar untuk judul utama di layar
-          color: secondaryTextColor,
-        ),
-        titleMedium: TextStyle(
-          fontSize: 18, // Ukuran sedang untuk judul atau subtitle
-          color: primaryTextColor,
-          fontWeight: FontWeight.bold,
-        ),
-        titleSmall: TextStyle(
-          fontSize: 14, // Ukuran kecil untuk subtitle atau label
-          color: secondaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        bodyLarge: TextStyle(
-          fontSize: 16, // Ukuran teks utama
-          color: primaryTextColor,
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 14, // Ukuran teks sekunder
-          color: primaryTextColor,
-        ),
-        bodySmall: TextStyle(
-          fontSize: 12, // Ukuran untuk teks tambahan atau catatan
-          color: secondaryTextColor,
-        ),
-        labelLarge: TextStyle(
-          fontSize:
-              14, // Label besar, digunakan untuk tombol atau label penting
-          color: secondaryTextColor,
-        ),
-        labelMedium: TextStyle(
-          fontSize: 12, // Label sedang untuk UI elemen
-          color: secondaryTextColor,
-        ),
-        labelSmall: TextStyle(
-          fontSize: 11, // Label kecil, digunakan untuk indikator atau ikon
-          color: secondaryTextColor,
-        ),
-      ),
+      textTheme: textTheme(primaryTextColor, secondaryTextColor),
     );
   }
 
   // Dark Theme Data (Opsional)
   static ThemeData get darkTheme {
     Color primaryTextColor = const Color(0xFFFFFFFF);
-    Color secondaryTextColor = const Color(0xFF98A1BD);
+    Color secondaryTextColor = Pallete.grey2;
 
     return ThemeData(
       brightness: Brightness.dark,
-      fontFamily: GoogleFonts.abel().fontFamily,
-      scaffoldBackgroundColor: const Color(0xFF02174C),
-      primaryColor: const Color(0xFF8E97FD),
+      fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
+      scaffoldBackgroundColor: Pallete.black2,
+      primaryColor: Pallete.blue1,
       primaryColorDark: const Color(0xFFE6E7F2),
       primaryColorLight: Colors.black,
-      dividerTheme: DividerThemeData(color: Colors.grey[800]),
+      cardColor: const Color(0xFFF7F7F7).withOpacity(0.02),
+      dividerColor: Pallete.black1,
+      dividerTheme: DividerThemeData(color: Pallete.black1),
       tabBarTheme: TabBarTheme(
         splashFactory: NoSplash.splashFactory, // Menonaktifkan ripple
         overlayColor: MaterialStateProperty.all(
             Colors.transparent), // Menonaktifkan hover
       ),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Color(0xFF02174C),
-        elevation: 0,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Pallete.black2,
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black.withOpacity(0.1),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Color(0xFF03174D), // Warna background untuk mode gelap
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: Pallete.black1, // Warna background untuk mode gelap
       ),
-      textTheme: TextTheme(
-        displayLarge: TextStyle(
-          fontSize: 57, // Display terbesar untuk teks utama atau header besar
-          color: primaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        displayMedium: TextStyle(
-          fontSize:
-              45, // Display sedang, digunakan untuk header besar namun tidak dominan
-          color: primaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        displaySmall: TextStyle(
-          fontSize: 36, // Display kecil, untuk sub-header atau judul penting
-          color: primaryTextColor,
-          fontWeight: FontWeight.bold,
-        ),
-        headlineLarge: TextStyle(
-          fontSize: 32, // Ukuran untuk headline atau judul utama
-          color: secondaryTextColor,
-        ),
-        headlineMedium: TextStyle(
-          fontSize: 28, // Ukuran headline menengah
-          color: primaryTextColor,
-        ),
-        headlineSmall: TextStyle(
-          fontSize: 24, // Ukuran headline kecil
-          color: primaryTextColor,
-        ),
-        titleLarge: TextStyle(
-          fontSize: 22, // Ukuran besar untuk judul utama di layar
-          color: secondaryTextColor,
-        ),
-        titleMedium: TextStyle(
-          fontSize: 18, // Ukuran sedang untuk judul atau subtitle
-          color: primaryTextColor,
-          fontWeight: FontWeight.bold,
-        ),
-        titleSmall: TextStyle(
-          fontSize: 14, // Ukuran kecil untuk subtitle atau label
-          color: secondaryTextColor,
-          fontWeight: FontWeight.w300,
-        ),
-        bodyLarge: TextStyle(
-          fontSize: 16, // Ukuran teks utama
-          color: primaryTextColor,
-        ),
-        bodyMedium: TextStyle(
-          fontSize: 14, // Ukuran teks sekunder
-          color: primaryTextColor,
-        ),
-        bodySmall: TextStyle(
-          fontSize: 12, // Ukuran untuk teks tambahan atau catatan
-          color: secondaryTextColor,
-        ),
-        labelLarge: TextStyle(
-          fontSize:
-              14, // Label besar, digunakan untuk tombol atau label penting
-          color: secondaryTextColor,
-        ),
-        labelMedium: TextStyle(
-          fontSize: 12, // Label sedang untuk UI elemen
-          color: secondaryTextColor,
-        ),
-        labelSmall: TextStyle(
-          fontSize: 11, // Label kecil, digunakan untuk indikator atau ikon
-          color: secondaryTextColor,
-        ),
+      textTheme: textTheme(primaryTextColor, secondaryTextColor),
+    );
+  }
+
+  static TextTheme textTheme(primaryTextColor, secondaryTextColor) {
+    return TextTheme(
+      displayLarge: TextStyle(
+        fontSize: 57, // Display terbesar untuk teks utama atau header besar
+        color: primaryTextColor,
+        fontWeight: FontWeight.w300,
+      ),
+      displayMedium: TextStyle(
+        fontSize:
+            45, // Display sedang, digunakan untuk header besar namun tidak dominan
+        color: primaryTextColor,
+        fontWeight: FontWeight.w300,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 36, // Display kecil, untuk sub-header atau judul penting
+        color: primaryTextColor,
+        fontWeight: FontWeight.bold,
+      ),
+      headlineLarge: TextStyle(
+        fontSize: 32, // Ukuran untuk headline atau judul utama
+        color: secondaryTextColor,
+      ),
+      headlineMedium: TextStyle(
+        fontSize: 28, // Ukuran headline menengah
+        color: primaryTextColor,
+      ),
+      headlineSmall: TextStyle(
+        fontSize: 24, // Ukuran headline kecil
+        color: primaryTextColor,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 22, // Ukuran besar untuk judul utama di layar
+        color: secondaryTextColor,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 18, // Ukuran sedang untuk judul atau subtitle
+        color: primaryTextColor,
+        fontWeight: FontWeight.bold,
+      ),
+      titleSmall: TextStyle(
+        fontSize: 14, // Ukuran kecil untuk subtitle atau label
+        color: secondaryTextColor,
+        fontWeight: FontWeight.w300,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 16, // Ukuran teks utama
+        color: primaryTextColor,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14, // Ukuran teks sekunder
+        color: primaryTextColor,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 12, // Ukuran untuk teks tambahan atau catatan
+        color: secondaryTextColor,
+      ),
+      labelLarge: TextStyle(
+        fontSize: 14, // Label besar, digunakan untuk tombol atau label penting
+        color: secondaryTextColor,
+      ),
+      labelMedium: TextStyle(
+        fontSize: 12, // Label sedang untuk UI elemen
+        color: secondaryTextColor,
+      ),
+      labelSmall: TextStyle(
+        fontSize: 11, // Label kecil, digunakan untuk indikator atau ikon
+        color: secondaryTextColor,
       ),
     );
   }
