@@ -62,4 +62,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
+## Disclaimer
+
+The design of this application is based on a free Figma template available on the Figma Community. All rights to the original design belong to the respective creator. This implementation is for learning and non-commercial purposes only.
+
 🎉 **Happy developing!** If you have any questions, feel free to reach out to us.
