@@ -19,6 +19,7 @@ Source: [Figma File](https://www.figma.com/community/file/881015895655545375)
 ## 🚀 Feature
 
 - **Responsive Design**: Supports various screen sizes with responsive UI elements.
+- **Dark & Light Theme**: Provides both dark and light modes for a more comfortable user experience.
 - **Seamless Navigation**: Implements navigation using Flutter Navigator.
 - **Reusable Components**: Modular components for easier development and maintenance.
 
