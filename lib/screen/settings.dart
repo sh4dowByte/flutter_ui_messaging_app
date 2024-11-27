@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_messaging_app/config/pallete.dart';
 import 'package:flutter_ui_messaging_app/utils/unplash.dart';
+import 'package:get/get.dart';
+import '../config/app_theme.dart';
 import '../widget/widget.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -71,6 +73,9 @@ class _SettingsPageState extends State<SettingsPage> {
                 onChanged: (value) {
                   setState(() {
                     isSwitched = value;
+                    Get.isDarkMode
+                        ? Get.changeTheme(AppTheme.lightTheme)
+                        : Get.changeTheme(AppTheme.darkTheme);
                   });
                 },
               ),
@@ -89,12 +94,12 @@ class _SettingsPageState extends State<SettingsPage> {
 class AppMenuTile extends StatelessWidget {
   final Widget? leading;
   final String title;
-  final String icon;
+  final String? icon;
   const AppMenuTile({
     super.key,
     this.leading,
     required this.title,
-    required this.icon,
+    this.icon,
   });
 
   @override
@@ -107,8 +112,10 @@ class AppMenuTile extends StatelessWidget {
         children: [
           Row(
             children: [
-              AppSvgIcon(icon, color: Pallete.blue1),
-              const SizedBox(width: 16),
+              if (icon != null) ...[
+                AppSvgIcon(icon!, color: Pallete.blue1),
+                const SizedBox(width: 16),
+              ],
               Text(title),
             ],
           ),

@@ -78,8 +78,8 @@ class UnsplashWidget extends StatelessWidget {
 
   static Widget getById(String id,
       {double quality = 1000,
-      int? width = 100,
-      int? height = 100,
+      double? width,
+      double? height,
       BoxFit? fit,
       bool isPremiumImage = false}) {
     final String subdomain = isPremiumImage ? 'plus' : 'images';
@@ -89,8 +89,8 @@ class UnsplashWidget extends StatelessWidget {
     return Image.network(
       image,
       fit: fit ?? BoxFit.cover, // Pastikan nilai fit default diterapkan
-      width: width?.toDouble(), // Jika ada width, gunakan double
-      height: height?.toDouble(), // Jika ada height, gunakan double
+      width: width, // Jika ada width, gunakan double
+      height: height, // Jika ada height, gunakan double
       loadingBuilder: (context, child, loadingProgress) {
         // Jika gambar sedang dimuat, tampilkan CircularProgressIndicator
         if (loadingProgress == null) {

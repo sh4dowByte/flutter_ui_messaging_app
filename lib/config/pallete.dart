@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Pallete {
+  static Color textPrimary = const Color(0xFF1B1A57);
   static Color textSecondary = const Color(0xFF4F5E7B);
+
   static Color red = const Color(0xFFEB5757);
   static Color green = const Color(0xFF4CE417);
   static Color blue1 = const Color(0xFF2F80ED);

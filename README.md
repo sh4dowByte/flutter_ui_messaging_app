@@ -1,20 +1,20 @@
-![1732349085635](image/README/Thumbnail.png)
+![1732349085635](image/README/Cover.png)
 
 <p align="center">
-    <img src="https://github.com/sh4dowByte/flutter_ui_live_score/actions/workflows/main.yaml/badge.svg?branch=release" alt="CI/CD Badge" style="max-width: 100%;">
+    <img src="https://github.com/sh4dowByte/flutter_ui_messaging_app/actions/workflows/main.yaml/badge.svg?branch=release" alt="CI/CD Badge" style="max-width: 100%;">
     <img src="https://badgen.net/badge/Flutter/3.19.3/blue" alt="Flutter Version" style="max-width: 100%;">
     <img src="https://badgen.net/badge/Dart/3.3.1/blue" alt="Dart Version" style="max-width: 100%;">
 </p>
 
-# Flutter Live Score UI
+# Flutter Messaging UI
 
-Flutter Live Score UI is a mobile application developed using Flutter, designed to display live sports scores with a modern and responsive user interface. This project is a result of slicing a design created in Figma, focusing on visual details and delivering an optimal user experience. The app serves as a reference for building live score applications with an attractive UI and high performance.
+**Flutter Live Score UI** is a sleek and responsive mobile application built using Flutter, designed to deliver live sports scores in real time. This project was created by converting a design crafted in Figma, ensuring that the visual elements are faithfully represented and optimized for performance. The app features a modern UI that provides an engaging and interactive experience for users, with intuitive navigation and smooth transitions. It is intended to serve as both a practical reference for developing live score applications and a demonstration of Flutter's capabilities in creating visually stunning and performant mobile apps. Whether you're tracking your favorite team or following multiple sports events, this app ensures you stay up-to-date with the latest scores in a seamless manner.
 
 ## 🎨 Design
 
 The design of this application is based on the provided Figma file. The slicing process was carried out meticulously to ensure the application accurately represents the design.
 
-Source: [Figma File](https://www.figma.com/community/file/936495139689782604)
+Source: [Figma File](https://www.figma.com/community/file/881015895655545375)
 
 ## 🚀 Feature
 
@@ -46,12 +46,12 @@ This project is built using the following technologies:
 
 ## 🖼️ Screenshot
 
-| ![1732406306156](image/README/1732406306156.png)                                                                                                     | ![1732406322002](image/README/1732406322002.png) | ![1732406382441](image/README/1732406382441.png) |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| ![1732406421856](image/README/1732406421856.png)                                                                                                     | ![1732406434794](image/README/1732406434794.png) | ![1732406443157](image/README/1732406443157.png) |
-| ![1732406457751](image/README/1732406457751.png)                                                                                                     | ![1732406492032](image/README/1732406492032.png) | ![1732417761782](image/README/1732417761782.png) |
-| ![1732406513266](image/README/1732406513266.png)                                                                                                     | ![1732406525224](image/README/1732406525224.png) |                                                |
-| ![1732406539228](image/README//1732406539228.png) |                                                |                                                |
+| Light Mode | Dark Mode |
+| ---------- | --------- |
+|            |           |
+|            |           |
+|            |           |
+|            |           |
 
 ## 📝 License
 

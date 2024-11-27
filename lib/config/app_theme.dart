@@ -12,10 +12,11 @@ class AppTheme {
     Color secondaryTextColor = const Color(0xFFA1A4B2);
 
     return ThemeData(
+      useMaterial3: true,
       brightness: Brightness.light,
       fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
-      primaryColor: const Color(0xFF8E97FD),
-      scaffoldBackgroundColor: const Color(0xFFFEFEFE),
+      primaryColor: Pallete.blue1,
+      scaffoldBackgroundColor: const Color(0xFFFFFFFF),
       primaryColorDark: const Color(0xFF3F414E),
       primaryColorLight: Colors.white,
       dividerTheme: DividerThemeData(color: Colors.grey[100]),
@@ -24,9 +25,11 @@ class AppTheme {
         overlayColor: MaterialStateProperty.all(
             Colors.transparent), // Menonaktifkan hover
       ),
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
         backgroundColor: Colors.white,
-        elevation: 0,
+        surfaceTintColor: Colors.transparent,
+        elevation: 1,
+        shadowColor: Colors.black.withOpacity(0.1),
       ),
       switchTheme: SwitchThemeData(
         thumbColor: MaterialStateProperty.resolveWith((states) {

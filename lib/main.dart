@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'config/routes.dart';
 import 'screen/screen.dart';
@@ -38,8 +39,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Meditation App UI',
+    return GetMaterialApp(
+        title: 'Messaging App UI',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,

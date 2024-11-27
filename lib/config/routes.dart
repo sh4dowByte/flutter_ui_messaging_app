@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_messaging_app/screen/screen.dart';
 
 class Routes {
-  static const String signUp = '/sign_up';
-  static const String signIn = '/sign_in';
-  static const String chooseTopic = '/choose_topic';
-  static const String reminders = '/reminders';
-  static const String menu = '/menu';
-  static const String playOption = '/play_option';
-  static const String sleepMusic = '/sleep_music';
-  static const String welcome = '/welcome';
-  static const String music = '/music';
+  static const String groupChats = '/group_chats';
+  static const String groupDescription = '/group_description';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case signUp:
-      //   return MaterialPageRoute(builder: (_) => const SignUpPage());
+      case groupChats:
+        return MaterialPageRoute(builder: (_) => const GroupChatsPage());
+
+      case groupDescription:
+        return MaterialPageRoute(builder: (_) => const GroupDescriptionPage());
 
       case '/':
       default:
