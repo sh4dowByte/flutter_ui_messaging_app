@@ -4,6 +4,7 @@
     <img src="https://github.com/sh4dowByte/flutter_ui_messaging_app/actions/workflows/main.yaml/badge.svg?branch=release" alt="CI/CD Badge" style="max-width: 100%;">
     <img src="https://badgen.net/badge/Flutter/3.19.3/blue" alt="Flutter Version" style="max-width: 100%;">
     <img src="https://badgen.net/badge/Dart/3.3.1/blue" alt="Dart Version" style="max-width: 100%;">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="Dart Version" style="max-width: 100%;">
 </p>
 
 # Flutter Messaging UI
@@ -13,8 +14,6 @@
 ## 🎨 Design
 
 The design of this application is based on the provided Figma file. The slicing process was carried out meticulously to ensure the application accurately represents the design.
-
-Source: [Figma File](https://www.figma.com/community/file/881015895655545375)
 
 ## 🚀 Feature
 
@@ -56,7 +55,15 @@ This project is built using the following technologies:
 | ![1732683277946](image/README/1732683277946.png) | ![1732683393789](image/README/1732683393789.png) |
 | ![1732683289803](image/README/1732683289803.png) | ![1732683301522](image/README/1732683301522.png) |
 
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+You are free to use this project for personal or educational purposes, but commercial use is not allowed.
+
+For more details, refer to the [full license text](LICENSE).
 
 ## Disclaimer
 
 The design of this application is based on a free Figma template available on the Figma Community. All rights to the original design belong to the respective creator. This implementation is for learning and non-commercial purposes only.
+
+This project is based on a design from the Figma Community. The design's licensing terms may apply. Please check the original Figma design [here](https://www.figma.com/community/file/881015895655545375). Ensure compliance with the design's terms before using this project.
