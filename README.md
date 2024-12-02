@@ -9,7 +9,11 @@
 
 # Flutter Messaging UI
 
-*Flutter UI Showcase* is a modern and responsive mobile application built using Flutter, designed to demonstrate visually appealing and high-performance user interfaces. This project was created by converting a design from Figma, ensuring precise visual representation and optimized performance. The app highlights a sleek UI with intuitive navigation and smooth transitions, making it a practical reference for developers aiming to create visually stunning applications. This project showcases Flutter's capabilities in building mobile applications that prioritize aesthetics and performance without compromising user experience.
+*Flutter Messaging UI* is a modern and responsive mobile application built using Flutter, designed to demonstrate visually appealing and high-performance user interfaces. This project was created by converting a design from Figma, ensuring precise visual representation and optimized performance. The app highlights a sleek UI with intuitive navigation and smooth transitions, making it a practical reference for developers aiming to create visually stunning applications. This project showcases Flutter's capabilities in building mobile applications that prioritize aesthetics and performance without compromising user experience.
+
+<a href="https://github.com/sh4dowByte/flutter_ui_messaging_app/releases/download/v1.0.0%2B1-1/app-release.apk">
+    <img src="https://playerzon.com/asset/download.png" width="200" data-canonical-src="https://playerzon.com/asset/download.png" style="max-width: 100%;">
+</a>
 
 ## 🎨 Design
 
@@ -64,6 +68,7 @@ For more details, refer to the [full license text](LICENSE).
 
 ## Disclaimer
 
-The design of this application is based on a free Figma template available in the Figma Community. All rights to the original design are retained by the respective creator. This implementation is intended solely for educational and non-commercial purposes.
+The design of this application is based on a free Figma template available in the Figma Community, originally created by **[fafaaye]**. All rights to the original design are retained by the respective creator. This implementation is intended solely for educational and non-commercial purposes.
 
-This project utilizes a design sourced from the Figma Community. Licensing terms of the original design may apply. Please review the original Figma design [here](https://www.figma.com/community/file/881015895655545375) to ensure compliance with its terms before utilizing this project in any capacity.
+This project utilizes a design sourced from the Figma Community, created by **[fafaaye]**. Licensing terms of the original design may apply. Please review the original Figma design [here](https://www.figma.com/community/file/881015895655545375) to ensure compliance with its terms before utilizing this project in any capacity.
+
